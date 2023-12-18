@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8"> -->
+
+  <!-- Avoiding cache -->
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+<main class="mainWrap">
+  <section class="adviceContainer">
+    <h1 id="advice-title" class="adviceTitle">ADVICE #<span id="advice-num" class="adviceNum">117</span></h1><!-- Advice ID goes here -->
+
+
+    <section class="adviceTextContainer">
+          <p id="advice-text" class="adviceText">"It is easy to sit up and take notice, what's difficult is getting up and taking action"</p>
+    </section>
+
+
+
+    <figure class="adviceDividerContainer">
+      <img class="adviceMobileDivider" src="../../images/pattern-divider-mobile.svg" alt="divider image">
+      <img class="adviceDesktopDivider" src="../../images/pattern-divider-mobile.svg" alt="divider image">
+    </figure>
+
+    <section class="adviceCircleContainer">
+      <div class="diceContainer">
+        <img class="dice" id="generate-random-advice" src="../../images/icon-dice.svg" alt="dice image">
+      </div>
+    </section>
+
+  </section>
+</main>
+
+<!-- <footer class="footerWrap">
+  <section class="attribution">
+    Challenge by <a type="button" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </section>
+</footer> -->
+
+
+  <script src="../javascript/app.js"></script>
+</body>
+</html>

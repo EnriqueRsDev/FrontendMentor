@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(218, 23%, 16%);
+}
+
+.mainWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 90vh;
+}
+.mainWrap .adviceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  padding: 25px;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 22px;
+}
+@media only screen and (min-width: 1024px) {
+  .mainWrap .adviceContainer {
+    width: 465px;
+  }
+}
+.mainWrap .adviceContainer .adviceTitle {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: hsl(150, 100%, 66%);
+  font-weight: 800;
+}
+.mainWrap .adviceContainer .adviceTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 172px;
+  padding: 10px 0;
+  margin-bottom: 26px;
+}
+.mainWrap .adviceContainer .adviceTextContainer .adviceText {
+  font-size: 26px;
+  color: hsl(193, 38%, 86%);
+  font-weight: 800;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .mainWrap .adviceContainer .adviceTextContainer .adviceText {
+    font-size: 28px;
+  }
+}
+.mainWrap .adviceContainer .adviceDividerContainer {
+  width: 295px;
+}
+.mainWrap .adviceContainer .adviceDividerContainer .adviceDesktopDivider {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .mainWrap .adviceContainer .adviceDividerContainer .adviceMobileDivider {
+    display: none;
+  }
+  .mainWrap .adviceContainer .adviceDividerContainer .adviceDesktopDivider {
+    display: block;
+  }
+}
+.mainWrap .adviceContainer .adviceCircleContainer {
+  width: auto;
+  height: 20px;
+  margin-top: 6px;
+}
+.mainWrap .adviceContainer .adviceCircleContainer .diceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 100%;
+  top: 16px;
+}
+.mainWrap .adviceContainer .adviceCircleContainer .diceContainer .dice {
+  position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .mainWrap .adviceContainer .adviceCircleContainer {
+    cursor: pointer;
+  }
+  .mainWrap .adviceContainer .adviceCircleContainer .diceContainer:hover {
+    box-shadow: 1px 1px 32px -1px rgba(82, 255, 169, 0.9);
+  }
+}/*# sourceMappingURL=styles.css.map */

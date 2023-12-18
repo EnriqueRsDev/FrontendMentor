@@ -1,0 +1,232 @@
+// Variables
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+$spaceMono:  'Space Mono', monospace;
+$spaceMonoWeights: 700;
+$largeTitle: 32px;
+$inputFontSize: 24px;
+
+// Colors
+//Primary
+$lightCyan: hsl(172.6,61.34%,76.67%);
+$strongCyan: hsl(172, 67%, 45%);
+
+// Neutral Colors
+$veryDarkCyan: hsl(183, 100%, 15%);
+$darkGrayishCyan: hsl(186, 14%, 43%);
+$grayishCyan: hsl(184, 14%, 56%);
+$lightGrayishCyan: hsl(185, 41%, 84%);
+$VeryLightGrayishCyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+// Widths
+$mobileWidth: 335px;
+
+// Classes
+%subtitles {
+    font-size: 18px;
+    color: $darkGrayishCyan;
+}
+
+%percentageButton {
+    width: 152px;
+    height: 52px;
+    background-color: $veryDarkCyan;
+    color: $white;
+    font-size: $inputFontSize;
+    border: none;
+    border-radius: 6px;
+
+}
+
+%activeButton {
+    background-color: $strongCyan;
+    color: $veryDarkCyan;
+}
+
+%textInput {
+    width: 93%;
+    height: 52px;
+    margin-top: 8px;
+    padding: 4px;
+    padding-right: 18px;
+    font-size: $inputFontSize;
+    color: $veryDarkCyan;
+    text-align: end;
+    background-color: $VeryLightGrayishCyan;
+    border: none;
+    border-radius: 6px;
+}
+
+// %totalsContainer {
+
+// }
+
+
+
+// General Styles
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $spaceMono;
+}
+
+body {
+    background-color: $lightGrayishCyan;
+}
+
+// Header -- Start
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+
+    .titleContainer {
+        font-size: 20px;
+        letter-spacing: 6px;
+        color: $darkGrayishCyan;
+    }
+}
+// Header -- End
+
+// Main -- Start
+.sectionsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 32px;
+    gap: 28px;
+    border-radius: 24px 24px 0 0;
+    background-color: $white;
+
+    .subtitlesContainer {
+        display: flex;
+        justify-content: space-between;
+        .subtitles {
+            @extend %subtitles;
+        }
+
+        .dangerText {
+            @extend %subtitles;
+            // display: none;
+            color: red
+        }
+    }
+
+
+
+    .textInput {
+        @extend %textInput;
+
+        &:focus {
+            outline: 2px solid $strongCyan;
+        }
+    }
+
+    .textInputDanger {
+        outline: 2px solid red;
+    }
+
+    .iconContainer {
+        position: relative;
+        width: 271px;
+
+        .inputIcon {
+            position: absolute;
+            width: 15px;
+            height: 21px;
+            top: 26px;
+            left: 18px;
+        }
+    }
+
+
+    .tipPercentageContainer {
+        width: 100%;
+
+        .percentageContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            gap: 16px;
+            margin-top: 8px;
+    
+            .percentageButton {
+                @extend %percentageButton;
+                
+                &:hover {
+                    cursor: pointer;
+                    color: $veryDarkCyan;
+                    background-color: $lightCyan;
+                }
+            }
+
+    
+            #customTipPercentage {
+                width: 134px;
+                margin: 0;
+                padding: 0;
+                padding-right: 18px;
+            }
+    
+            .activeButton {
+                @extend %activeButton;
+            }
+        }
+    }
+
+
+    .resultContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 28px 18px 18px 18px;
+        border-radius: 12px;
+        gap: 18px;
+        background-color: $veryDarkCyan;
+
+        .totalsContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .totalTitleContainer {
+                .totalTitle {
+                    font-size: 18px;
+                    color: $white;
+                }
+
+                .totalSubtitle {
+                    font-size: 14px;
+                    color: $grayishCyan;
+                }
+            }
+
+            .totalAmount {
+                font-size: $inputFontSize;
+                color: $strongCyan;
+            }
+        }
+
+        .resetButton {
+            @extend %activeButton;
+            height: 52px;
+            border: none;
+            border-radius: 6px;
+            font-size: $inputFontSize;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $lightCyan;
+            }
+        }
+    }
+}
+// Main -- End

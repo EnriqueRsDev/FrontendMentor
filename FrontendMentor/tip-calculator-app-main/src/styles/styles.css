@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+.sectionsContainer .subtitlesContainer .dangerText, .sectionsContainer .subtitlesContainer .subtitles {
+  font-size: 18px;
+  color: hsl(186, 14%, 43%);
+}
+
+.sectionsContainer .tipPercentageContainer .percentageContainer .percentageButton {
+  width: 152px;
+  height: 52px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-size: 24px;
+  border: none;
+  border-radius: 6px;
+}
+
+.sectionsContainer .resultContainer .resetButton, .sectionsContainer .tipPercentageContainer .percentageContainer .activeButton {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.sectionsContainer .textInput {
+  width: 93%;
+  height: 52px;
+  margin-top: 8px;
+  padding: 4px;
+  padding-right: 18px;
+  font-size: 24px;
+  color: hsl(183, 100%, 15%);
+  text-align: end;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 150px;
+  margin: 0 auto;
+}
+.headerContainer .titleContainer {
+  font-size: 20px;
+  letter-spacing: 6px;
+  color: hsl(186, 14%, 43%);
+}
+
+.sectionsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 32px;
+  gap: 28px;
+  border-radius: 24px 24px 0 0;
+  background-color: hsl(0, 0%, 100%);
+}
+.sectionsContainer .subtitlesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.sectionsContainer .subtitlesContainer .dangerText {
+  color: red;
+}
+.sectionsContainer .textInput:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.sectionsContainer .textInputDanger {
+  outline: 2px solid red;
+}
+.sectionsContainer .iconContainer {
+  position: relative;
+  width: 271px;
+}
+.sectionsContainer .iconContainer .inputIcon {
+  position: absolute;
+  width: 15px;
+  height: 21px;
+  top: 26px;
+  left: 18px;
+}
+.sectionsContainer .tipPercentageContainer {
+  width: 100%;
+}
+.sectionsContainer .tipPercentageContainer .percentageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  margin-top: 8px;
+}
+.sectionsContainer .tipPercentageContainer .percentageContainer .percentageButton:hover {
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172.6, 61.34%, 76.67%);
+}
+.sectionsContainer .tipPercentageContainer .percentageContainer #customTipPercentage {
+  width: 134px;
+  margin: 0;
+  padding: 0;
+  padding-right: 18px;
+}
+.sectionsContainer .resultContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px 18px 18px;
+  border-radius: 12px;
+  gap: 18px;
+  background-color: hsl(183, 100%, 15%);
+}
+.sectionsContainer .resultContainer .totalsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.sectionsContainer .resultContainer .totalsContainer .totalTitleContainer .totalTitle {
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+}
+.sectionsContainer .resultContainer .totalsContainer .totalTitleContainer .totalSubtitle {
+  font-size: 14px;
+  color: hsl(184, 14%, 56%);
+}
+.sectionsContainer .resultContainer .totalsContainer .totalAmount {
+  font-size: 24px;
+  color: hsl(172, 67%, 45%);
+}
+.sectionsContainer .resultContainer .resetButton {
+  height: 52px;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+}
+.sectionsContainer .resultContainer .resetButton:hover {
+  cursor: pointer;
+  background-color: hsl(172.6, 61.34%, 76.67%);
+}/*# sourceMappingURL=styles.css.map */

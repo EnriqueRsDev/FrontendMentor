@@ -1,0 +1,99 @@
+/* Layout sizes */
+/* Colors */
+/* Typography */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.wrap {
+  display: grid;
+  grid-template-columns: 0% 50% 50%;
+  align-self: center;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 900px;
+  margin-top: 128px;
+  border-radius: 22px;
+  background-color: hsl(255, 100%, 100%);
+}
+.wrap .cube-container {
+  position: relative;
+  z-index: 3;
+  top: 53px;
+  left: -94px;
+}
+.wrap .cube-container .cube {
+  content: url("../../images/illustration-box-desktop.svg");
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+.wrap .img-container {
+  display: flex;
+  align-items: center;
+  height: 500px;
+  width: 450px;
+  overflow: hidden;
+}
+.wrap .img-container .image {
+  content: url("../../images/illustration-woman-online-desktop.svg");
+  position: relative;
+  left: -80px;
+  z-index: 2;
+}
+.wrap .img-container .img-shadow {
+  content: url("../../images/bg-pattern-desktop.svg");
+  position: relative;
+  top: -73px;
+  left: -1040px;
+  z-index: 1;
+}
+.wrap .faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: static;
+  width: 80%;
+  height: -moz-max-content;
+  height: max-content;
+  gap: 12px;
+}
+.wrap .faq-container h1 {
+  padding: 8px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.wrap .faq-container .faq {
+  height: 18px;
+  overflow: hidden;
+  font-size: 12px;
+  padding: 8px;
+  line-height: 18px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.wrap .faq-container .faq .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.5px;
+  color: hsl(238, 29%, 16%);
+}
+.wrap .faq-container .faq .question .arrow {
+  width: auto;
+  height: 8px;
+}
+.wrap .faq-container .faq .question:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+.wrap .faq-container .faq .answer {
+  margin-top: 8px;
+  color: hsl(240, 6%, 50%);
+}
+.wrap .faq-container .faq-open {
+  height: 72px;
+}
+.wrap .faq-container .faq-open .question {
+  font-weight: 700;
+}
+.wrap .faq-container .faq-open .question .arrow {
+  rotate: 180deg;
+}/*# sourceMappingURL=desktop.css.map */

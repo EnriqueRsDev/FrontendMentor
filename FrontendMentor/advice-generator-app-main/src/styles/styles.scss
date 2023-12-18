@@ -1,0 +1,173 @@
+// Imports 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+
+// Variables
+$radius: 22px;
+
+// Widths
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// BreakPoints
+$mobile-breakpoint: 600px;
+$desktop-breakpoint: 1024px;
+$desktop-xl-breakpoint: 1440px;
+
+
+// Colors
+
+// Primary Colors
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsla(150, 100%, 66%);
+$shadow-neon-green: rgba(82, 255, 169, 0.9);
+
+// Neutral Colors
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+// Typography
+$title-size: 12px;
+$quote-mobile-size: 26px;
+$quote-desktop-size: 28px;
+$manrope: 'Manrope', sans-serif;
+$manrope-bold: 800;
+
+// Responsive mixins
+// Material Design breakpoints
+@mixin small {
+    @media only screen and (min-width: $mobile-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin medium {
+    @media only screen and (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin large {
+    @media only screen and (min-width: $desktop-xl-breakpoint) {
+      @content;
+    }
+  }
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: $manrope;
+    background-color: $dark-blue;
+}
+
+.mainWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+
+    .adviceContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        padding: 25px;
+        background-color: $dark-grayish-blue;
+        border-radius: $radius;
+
+        @include medium {
+            width: 465px;
+        }
+
+        .adviceTitle {
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            font-size: $title-size;
+            letter-spacing: 3px;
+            color: $neon-green;
+            font-weight: $manrope-bold;
+        }
+
+        .adviceTextContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 172px;
+            padding: 10px 0;
+            margin-bottom: 26px;
+
+            .adviceText {
+                font-size: $quote-mobile-size;
+                color: $light-cyan;
+                font-weight: $manrope-bold;
+                text-align: center;
+
+                @include medium {
+                    font-size: $quote-desktop-size;
+                }
+            }
+        }
+
+        .adviceDividerContainer {
+            width: 295px;
+
+            .adviceDesktopDivider {
+                display: none;
+            }
+
+            @include  medium {
+                .adviceMobileDivider {
+                    display: none;
+                }
+
+                .adviceDesktopDivider {
+                    display: block;
+                }
+            }
+
+        }  
+        
+        .adviceCircleContainer {
+            width: auto;
+            height: 20px;
+            margin-top: 6px;
+
+            .diceContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 60px;
+                height: 60px;
+                background-color: $neon-green;
+                border-radius: 100%;
+                top: 16px;
+        
+                .dice {
+                    position: relative;
+                }
+            }
+
+            @include medium {
+                cursor: pointer;
+                
+                .diceContainer:hover {
+                    -webkit-box-shadow: 1px 1px 32px -1px $shadow-neon-green;
+                    -moz-box-shadow: 1px 1px 32px -1px $shadow-neon-green;
+                    box-shadow: 1px 1px 32px -1px $shadow-neon-green;
+                }
+            }
+        }
+    }
+   
+}
